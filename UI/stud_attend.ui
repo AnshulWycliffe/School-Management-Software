@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Student Attendance</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="styleSheet">
+       <string notr="true">/* Styling the Tab Widget */
+QTabWidget {
+    background-color: #f0f0f0;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+/* Styling the Tabs */
+QTabBar::tab {
+    background-color: #2196F3;  /* Tab background color */
+    color: white;
+    border: 1px solid #c0c0c0;
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 80px;
+    min-height: 30px;
+
+	font: 14pt &quot;Segoe UI&quot;;
+}
+
+</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <attribute name="title">
+        <string>Student Attendance</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="formFrame">
+            <property name="styleSheet">
+             <string notr="true">*{
+font: 14pt &quot;Segoe UI&quot;;
+
+}
+
+/* Styling the QLineEdit */
+QLineEdit {
+    background-color: #f4f4f4;  /* Light grey background */
+    color: #333333;  /* Dark text color */
+    border: 2px solid #c0c0c0;  /* Border color */
+    border-radius: 5px;  /* Rounded corners */
+    padding: 5px;
+}
+
+/* Focused state (when the QLineEdit is selected) */
+QLineEdit:focus {
+    border: 2px solid #2196F3;  /* Blue border when focused */
+    background-color: #ffffff;  /* White background on focus */
+}
+
+/* Disabled state */
+QLineEdit:disabled {
+    background-color: #e0e0e0;  /* Grey background when disabled */
+    color: #888888;  /* Light grey text when disabled */
+    border: 2px solid #cccccc;  /* Light grey border */
+}
+
+/* Placeholder text style */
+QLineEdit::placeholder {
+    color: #888888;  /* Light grey color for placeholder text */
+    font-style: italic;  /* Italicize the placeholder text */
+}
+
+/* Styling the text cursor */
+QLineEdit::cursor {
+    color: #2196F3;  /* Change cursor color to blue */
+}
+</string>
+            </property>
+            <layout class="QFormLayout" name="formLayout">
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_13">
+               <property name="text">
+                <string>Standard</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QComboBox" name="std_class_box">
+               <property name="styleSheet">
+                <string notr="true">/* Styling the QComboBox */
+QComboBox {
+    background-color: #f4f4f4;  /* Light grey background */
+    color: #333333;  /* Dark text color */
+    border: 2px solid #c0c0c0;  /* Border color */
+    border-radius: 5px;  /* Rounded corners */
+    padding: 5px;
+    font: 14pt &quot;Segoe UI&quot;;
+
+    min-width: 150px;  /* Minimum width of the combo box */
+}
+
+/* Styling the combo box when focused */
+QComboBox:focus {
+    border: 2px solid #2196F3;  /* Blue border when focused */
+    background-color: #ffffff;  /* White background on focus */
+}
+
+/* Disabled state for the combo box */
+QComboBox:disabled {
+    background-color: #e0e0e0;  /* Grey background when disabled */
+    color: #888888;  /* Light grey text when disabled */
+    border: 2px solid #cccccc;  /* Light grey border */
+}
+
+/* Arrow button of the combo box */
+
+
+/* Styling the dropdown list */
+QComboBox QAbstractItemView {
+    background-color: #ffffff;  /* White background for the dropdown list */
+    color: #333333;  /* Dark text color */
+    border: 1px solid #c0c0c0;  /* Border around the dropdown list */
+    border-radius: 5px;
+    padding: 5px;
+    min-width: 150px;
+}
+
+/* Hover effect on the dropdown list items */
+QComboBox QAbstractItemView::item:hover {
+    background-color: #2196F3;  /* Blue background on hover */
+    color: #ffffff;  /* White text on hover */
+}
+
+/* Selected item in the dropdown list */
+QComboBox QAbstractItemView::item:selected {
+    background-color: #64B5F6;  /* Light blue background when selected */
+    color: #ffffff;  /* White text when selected */
+}
+</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string>Class 1</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Class 2</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Class 3</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Class 4</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Class 5</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Class 6</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Class 7</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Class 8</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Class 9</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Class 10</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Class 11</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Class 12</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_14">
+               <property name="text">
+                <string>Division</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QComboBox" name="std_section_box">
+               <property name="styleSheet">
+                <string notr="true">/* Styling the QComboBox */
+QComboBox {
+    background-color: #f4f4f4;  /* Light grey background */
+    color: #333333;  /* Dark text color */
+    border: 2px solid #c0c0c0;  /* Border color */
+    border-radius: 5px;  /* Rounded corners */
+    padding: 5px;
+    font: 14pt &quot;Segoe UI&quot;;
+
+    min-width: 150px;  /* Minimum width of the combo box */
+}
+
+/* Styling the combo box when focused */
+QComboBox:focus {
+    border: 2px solid #2196F3;  /* Blue border when focused */
+    background-color: #ffffff;  /* White background on focus */
+}
+
+/* Disabled state for the combo box */
+QComboBox:disabled {
+    background-color: #e0e0e0;  /* Grey background when disabled */
+    color: #888888;  /* Light grey text when disabled */
+    border: 2px solid #cccccc;  /* Light grey border */
+}
+
+/* Arrow button of the combo box */
+
+
+/* Styling the dropdown list */
+QComboBox QAbstractItemView {
+    background-color: #ffffff;  /* White background for the dropdown list */
+    color: #333333;  /* Dark text color */
+    border: 1px solid #c0c0c0;  /* Border around the dropdown list */
+    border-radius: 5px;
+    padding: 5px;
+    min-width: 150px;
+}
+
+/* Hover effect on the dropdown list items */
+QComboBox QAbstractItemView::item:hover {
+    background-color: #2196F3;  /* Blue background on hover */
+    color: #ffffff;  /* White text on hover */
+}
+
+/* Selected item in the dropdown list */
+QComboBox QAbstractItemView::item:selected {
+    background-color: #64B5F6;  /* Light blue background when selected */
+    color: #ffffff;  /* White text when selected */
+}
+</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string>A</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>B</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>C</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>D</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>E</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>F</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>G</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QTableWidget" name="std_attend_table">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QHeaderView::section {
+background-color: rgb(0, 120, 212);
+     /* Green background for headers */
+    color: white;             /* White text color */
+    font-weight: bold;        /* Bold font for header text */
+    text-align: center;       /* Center-align text */
+	
+	font: 700 14pt &quot;Segoe UI&quot;;
+    border: 1px solid #ccc;   /* Light gray border around header sections */
+    padding: 5px;             /* Padding inside header cells */
+}
+</string>
+            </property>
+            <row/>
+            <row/>
+            <row/>
+            <column>
+             <property name="text">
+              <string>Standard</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Division</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Date</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Student ID</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Student Name</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Attendance</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignRight">
+           <widget class="QCalendarWidget" name="std_calender_box"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="fetch_btn">
+            <property name="styleSheet">
+             <string notr="true">/* Styling the QPushButton */
+QPushButton {
+	  /* Green background */
+	background-color: rgb(0, 120, 212);
+    color: white;  /* White text color */
+    border: 2px solid #4CAF50;  /* Border color matches background */
+    border-radius: 5px;  /* Rounded corners */
+    padding: 10px 20px;  /* Vertical and horizontal padding */
+    
+    font: 14pt &quot;Segoe UI&quot;; /* Font size */
+    min-width: 100px;  /* Minimum width for the button */
+}
+
+/* Hover effect when the mouse is over the button */
+QPushButton:hover {
+    background-color: #45a049;  /* Darker green background */
+    border-color: #45a049;  /* Darker green border */
+}
+
+/* Pressed effect when the button is clicked */
+QPushButton:pressed {
+    background-color: #388e3c;  /* Even darker green */
+    border-color: #388e3c;  /* Dark border */
+    padding-top: 12px;  /* Slightly reduces padding to simulate a &quot;pressed&quot; effect */
+    padding-left: 18px;  /* Shift the button to the left slightly */
+}
+
+/* Focused state (when the button is focused) */
+QPushButton:focus {
+    border: 2px solid #2196F3;  /* Blue border when focused */
+    outline: none;  /* Removes the default outline */
+}
+
+/* Disabled state for the QPushButton */
+QPushButton:disabled {
+    background-color: #e0e0e0;  /* Light grey background */
+    color: #888888;  /* Light grey text */
+    border: 2px solid #cccccc;  /* Light grey border */
+}
+
+/* Styling the text of the QPushButton */
+QPushButton {
+    font-weight: bold;  /* Make the text bold */
+}
+
+/* Styling the QPushButton icon (if it has one) */
+QPushButton::icon {
+    padding-right: 10px;  /* Space between the icon and the text */
+}
+
+/* Border effect when the button is in a focus or pressed state */
+QPushButton:focus, QPushButton:pressed {
+    border-style: inset;
+}
+</string>
+            </property>
+            <property name="text">
+             <string>Fetch Attendance</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="save_btn">
+            <property name="styleSheet">
+             <string notr="true">/* Styling the QPushButton */
+QPushButton {
+background-color: rgb(0, 120, 212);
+      /* Green background */
+    color: white;  /* White text color */
+    border: 2px solid #4CAF50;  /* Border color matches background */
+    border-radius: 5px;  /* Rounded corners */
+    padding: 10px 20px;  /* Vertical and horizontal padding */
+    
+    font: 14pt &quot;Segoe UI&quot;; /* Font size */
+    min-width: 100px;  /* Minimum width for the button */
+}
+
+/* Hover effect when the mouse is over the button */
+QPushButton:hover {
+    background-color: #45a049;  /* Darker green background */
+    border-color: #45a049;  /* Darker green border */
+}
+
+/* Pressed effect when the button is clicked */
+QPushButton:pressed {
+    background-color: #388e3c;  /* Even darker green */
+    border-color: #388e3c;  /* Dark border */
+    padding-top: 12px;  /* Slightly reduces padding to simulate a &quot;pressed&quot; effect */
+    padding-left: 18px;  /* Shift the button to the left slightly */
+}
+
+/* Focused state (when the button is focused) */
+QPushButton:focus {
+    border: 2px solid #2196F3;  /* Blue border when focused */
+    outline: none;  /* Removes the default outline */
+}
+
+/* Disabled state for the QPushButton */
+QPushButton:disabled {
+    background-color: #e0e0e0;  /* Light grey background */
+    color: #888888;  /* Light grey text */
+    border: 2px solid #cccccc;  /* Light grey border */
+}
+
+/* Styling the text of the QPushButton */
+QPushButton {
+    font-weight: bold;  /* Make the text bold */
+}
+
+/* Styling the QPushButton icon (if it has one) */
+QPushButton::icon {
+    padding-right: 10px;  /* Space between the icon and the text */
+}
+
+/* Border effect when the button is in a focus or pressed state */
+QPushButton:focus, QPushButton:pressed {
+    border-style: inset;
+}
+</string>
+            </property>
+            <property name="text">
+             <string>Save Attendance</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

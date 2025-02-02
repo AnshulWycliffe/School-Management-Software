@@ -1,0 +1,22 @@
+<RCC>
+  <qresource>
+    <file>assets/classroom.png</file>
+    <file>assets/setting.png</file>
+    <file>assets/staff_record.png</file>
+    <file>assets/std_record.png</file>
+    <file>assets/admission_icon.png</file>
+    <file>assets/attendance.png</file>
+    <file>assets/calendar.png</file>
+    <file>assets/close.png</file>
+    <file>assets/edit_stud.png</file>
+    <file>assets/fees.png</file>
+    <file>assets/logout.png</file>
+    <file>assets/marks.png</file>
+    <file>assets/minimize.png</file>
+    <file>assets/result.png</file>
+    <file>assets/school.jpg</file>
+    <file>assets/staff.png</file>
+    <file>assets/staff-attend.png</file>
+    <file>assets/teaching.png</file>
+  </qresource>
+</RCC>

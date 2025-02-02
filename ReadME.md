@@ -35,13 +35,13 @@ A comprehensive Qt-based desktop application for managing school operations incl
 
 ### Prerequisites
 - Python 3.x 🐍
-- PyQt6 📦
+- Pyside6 📦
 - SQLite3 💾
-- python-docx-template (for report generation) 📄
+- docxtpl (for report generation) 📄
 
 ### Dependencies
 ```bash
-pip install PyQt6 sqlite3 python-docx-template random string subprocess
+pip install pyside6 sqlite3 docxtpl random string subprocess
 ```
 
 ## 🗃️ Database Structure
@@ -130,20 +130,16 @@ The system uses SQLite3 for data management with the following main tables:
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/school-management-system.git
+git clone https://github.com/anshulwycliffe/school-management-system.git
 ```
 
 2. Install required dependencies
 ```bash
-pip install PyQt6 python-docx-template
+pip install pyside6 docxtpl
 ```
 
-3. Set up the database
-```bash
-sqlite3 database/school.db < schema.sql
-```
 
-4. Run the application
+3. Run the application
 ```bash
 python main.py
 ```

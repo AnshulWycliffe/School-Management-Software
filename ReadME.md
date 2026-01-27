@@ -10,7 +10,6 @@ A comprehensive Qt-based desktop application for managing school operations incl
 - Student information editing ✏️
 - Student records viewing and filtering 🔍
 - Student attendance tracking 📅
-- Academic performance management 📊
 
 ### 👩‍🏫 Staff Management
 - Staff registration with automatic ID generation 🆔
@@ -22,7 +21,6 @@ A comprehensive Qt-based desktop application for managing school operations incl
 ### 📚 Academic Management
 - Mark entry and management 📝
 - Report card generation 🏅
-- Academic performance tracking 📈
 - Student attendance records 📊
 - Class and section management 🏫
 

@@ -166,10 +166,8 @@ python main.py
 1. Enter marks by subject 📝
 2. Generate report cards 🏅
 3. Calculate grades automatically 📈
-4. View academic performance history 📊
 
 ## 🤝 Contributing
-
 1. Fork the repository 🍴
 2. Create a feature branch 🧑‍💻
 3. Commit your changes 💾

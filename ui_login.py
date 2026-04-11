@@ -216,6 +216,6 @@ class Ui_MainWindow(object):
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Username: ", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Password:", None))
         self.login_btn.setText(QCoreApplication.translate("MainWindow", u"Login", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Developed By: Purva Gajpal - BCA Final Year", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Developed by: Anshul Wycliffe | BCA 2nd Sem", None))  # Developer Name
     # retranslateUi
 
